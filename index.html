@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title></title>
+		<link href="css/index.css" type="text/css" rel="stylesheet" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+	</head>
+	<body>
+		<div id="fullpage">
+			<div class="section" style="background: #0da5d6;">
+				<img class="logo" src="img/logo.png" />
+				<div class="text">
+					<img src="img/text_1.png"/>
+					<img src="img/text_2.png"/>
+					<img src="img/text_3.png"/>
+					<img src="img/text_4.png"/>
+					<img src="img/text_5.png"/>
+					<img src="img/text_6.png"/>
+					<img src="img/text_7.png"/>
+					<img src="img/text_8.png"/>
+				</div>
+				<img class="info1" src="img/info_1.png" />
+			</div>
+			<div class="section er" style="background: #2ab561;">
+				<div class="shield">
+					<img src="img/shield_1.png" />
+					<img src="img/shield_2.png" />
+					<img src="img/shield_3.png" />
+					<img src="img/shield_4.png" />
+					<img src="img/shield_5.png" />
+					<img src="img/shield_6.png" />
+					<img src="img/shield_7.png" />
+					<img src="img/shield_8.png" />
+					<img src="img/shield_9.png" />
+				</div>
+				<img class="info2" src="img/info_2.png" />
+			</div>
+			<div class="section san" style="background: #de8910;">
+				<img class="info3" src="img/info_3.png" />
+				<img class="circle" src="img/circle.png" />
+				<img class="rocket" src="img/rocket.png"/>
+			</div>
+			<div class="section si" style="background: #16ba9d;">
+				<div class="search_box">
+					<div class="key"></div>
+					<img class="search" src="img/search.png" />
+					<div class="result"></div>
+				</div>
+				<img src="img/info_4.png" />
+			</div>
+			<div class="section wu" style="background: #0da5d6;">
+				<img class="info5" src="img/info_5.png" />
+				<div class="box">
+					<img class="toolbar" src="img/toolbar.png" />
+					<img class="extra" src="img/extra.png" />
+					<div class="top"></div>
+					<div class="left"></div>
+					<div class="right"></div>
+					<div class="bottom"></div>
+					<div class="kuang"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$("#fullpage").fullpage({
+				afterLoad:function(a,b){
+					$(".section").removeClass("start");
+					$(".section").eq(b-1).addClass("start");
+				}
+			});
+		})
+	</script>
+</html>

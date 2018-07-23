@@ -1,0 +1,305 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.section{
+	overflow: hidden;
+}
+.logo{
+	display:block ;
+	margin:0px auto;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.text{
+	text-align: center;
+	padding-bottom: 50px;
+}
+.text img{
+	display:inline ;
+	margin: 0px 20px;
+	opacity: 0;
+}
+.info1{
+	display:block ;
+	margin:0 auto;
+}
+/*第一屏动画*/
+.section.start .text img{
+	margin: 0px 0px;
+	opacity: 1;
+	transition: all 2s;
+}
+.er{
+	padding: 0px 100px;
+}
+.er>div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.shield{
+	width: 430px;
+}
+.shield img{
+	float: left;
+}
+.shield img:nth-child(1){
+	transform: rotate(20deg) translateX(100px);
+}
+.shield img:nth-child(2){
+	transform: rotate(20deg) translateX(200px);
+}
+.shield img:nth-child(3){
+	transform: rotate(20deg) translateX(300px);
+}
+.shield img:nth-child(4){
+	transform: rotate(20deg) translateX(400px);
+}
+.shield img:nth-child(5){
+	transform: rotate(20deg) translateX(500px);
+}
+.shield img:nth-child(6){
+	transform: rotate(20deg) translateX(600px);
+}
+.shield img:nth-child(7){
+	transform: rotate(20deg) translateX(700px);
+}
+.shield img:nth-child(8){
+	transform: rotate(20deg) translateX(800px);
+}
+.shield img:nth-child(9){
+	transform: rotate(20deg) translateX(900px);
+}
+/*第二屏动画*/
+.section.start .shield img{
+	transform: rotate(0) translateX(0px);
+	transition: all 3s ease-in-out;
+}
+.san{
+	position: relative;
+	padding: 0 100px;
+}
+.san>div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.rocket{
+	position: absolute;
+	top: 700px;
+	left: 450px;
+}
+@-webkit-keyframes abc{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+/*第三屏动画*/
+.section.start .rocket{
+	top: 222px;
+	left: 920px;
+	transition: all 1s ;
+}
+.section.start .circle{
+	-webkit-animation: abc 10s linear infinite;
+}
+.si>div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.si{
+	padding: 0 80px;
+}
+.search_box{
+	width: 530px;
+	height: 550px;
+	overflow: hidden;
+	position: relative;
+	top: 75px;
+}
+.search{
+	position: absolute;
+	top: 50px;
+	left: -550px;
+}
+.key{
+	width: 0px;
+	height: 22px;
+	background: url(../img/key.png) no-repeat;
+	position: absolute;
+	top: 73px;
+	left: 20px;
+	
+}
+@keyframes name{
+	0%{ width: 0px;}
+	20%{width: 20px;}
+	40%{width: 40px;}
+	60%{width: 60px;}
+	80%{width: 80px;}
+	100%{width: 100px;}
+}
+.result{
+	width: 530px;
+	height: 0px;
+	background: url(../img/result.png);
+	position: absolute;
+	top: 102px;
+}
+/*第四屏*/
+.section.start .search{
+	left: 0px;
+	transition: all 2s;
+}
+.section.start .key{
+	animation:name 3s step-start 2s forwards;
+}
+.section.start .result{
+	height: 372px;
+	transition: all 3s linear 5s;
+}
+.info5{
+	display: block;
+	margin: 30px auto;
+}
+.box{
+	width: 1004px;
+	height: 440px;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.15);
+	position: relative;
+}
+.top{
+	position: absolute;
+	top: 0px;
+	left: 1300px;
+	width: 1004px;
+	height: 1px;
+	background: white;
+	opacity: 0.5;
+}
+.bottom{
+	position: absolute;
+	top: 410px;
+	left: -1300px;
+	width: 1004px;
+	height: 1px;
+	background: white;
+	opacity: 0.5;
+}
+.left{
+	position: absolute;
+	top: -600px;
+	left: 0px;
+	width: 1px;
+	height: 440px;
+	background: white;
+	opacity: 0.5;
+}
+.right{
+	position: absolute;
+	top: 600px;
+	left: 1004px;
+	width: 1px;
+	height: 440px;
+	background: white;
+	opacity: 0.5;
+}
+.kuang{
+	width: 0px;
+	height: 27px;
+	border: solid 0px rgba(255,255,255,0.5);
+	position: absolute;
+	top: 30px;
+	left: 70px;
+}
+@keyframes ss{
+	from{border: solid 1px rgba(255,255,255,0.5);width: 0px;}
+	to{border: solid 1px rgba(255,255,255,0.5);width: 920px;}
+}
+.toolbar{
+	opacity: 0;
+}
+.extra{
+	position: absolute;
+	bottom: 0px;
+	right: 4px;
+	opacity: 0;
+}
+/*第五屏动画*/
+.section.start .top{
+	left: 0px;
+	transition: all 2s ;
+}
+.section.start .left{
+	top: 0px;
+	transition: all 2s ;
+}
+.section.start .right{
+	top: 0px;
+	transition: all 2s ;
+}
+.section.start .bottom{
+	left: 0px;
+	transition: all 2s ;
+}
+.section.start .kuang{
+	animation: ss 2s 2s forwards;
+}
+.section.start .toolbar{
+	opacity: 1;
+	transition: all 2s 3s;
+}
+.section.start .extra{
+	opacity: 1;
+	transition: all 2s 3s;
+}
+@media all and (max-width:415px ) {
+	.section.start .text img {
+		width: 40px;
+	}
+	.info1{
+		width: 350px;
+	}
+	.logo{
+		padding-bottom: 60px;
+	}
+	.er{
+		padding: 0;
+	}
+	.er>div{
+		
+	}
+	.shield{
+		display: none;
+	}
+	.info2{
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+	}
+	.san{
+		padding: 0;
+	}
+	.san>div{
+		display: block;
+	}
+	.info3,.circle{
+		width: 90%;
+		margin: 50px auto;
+		display: block;
+	}
+	.rocket {
+		top: 635px;
+		left: -200px;
+	}
+	.section.start .rocket {
+		top: 335px;
+		left: 90px;
+	}
+}
